@@ -1,0 +1,63 @@
+/*---------------------------------------------------
+    STYLES v1.1
+  ---------------------------------------------------
+    initial Setup yo import all our SASS based files.
+
+	by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------*/
+
+//SASS HEIRACHY/STRUCTURE
+// Base - Base Styles/Files That should never change.
+// Partials - Some styles mgiht change per proejct.
+// Unique - Specific Styles and changes on a per proejct basis.
+
+
+//FIRST ALL THE IMPORTS
+//First we add in a reset and some normalize magic
+@import "base/_reset";
+@import "base/_normalize";
+
+//Settings Imported - These are unique for each project (fonts, colours, baseline settings etc)
+@import "unique/_settings";
+
+//Vertical Rhythm
+@import "base/_vertical_rhythm";
+
+//Mixins loaded first to ensure they work
+@import "base/_mixins";
+
+//Grid (GridsetApp)
+//@import "unique/gridset.scss";
+
+//Framwork Settings (Body, HTML, Footer, Header, Containers, Clearfix)
+@import "base/_framework";
+@import "base/_helpers";
+//@import "partials/_nav";
+
+//Base Typography, Links and Colour Styling/Settings
+@import "vendors/_google-fonts";
+@import "partials/_colours";
+@import "partials/_typography";
+@import "partials/_links";
+
+//Image Styles
+@import "partials/_images";
+
+//Box Styles
+//@import "partials/_boxes";
+
+//Table Styles
+//@import "partials/_tables";
+
+//Print Styles
+@import "base/_print";
+
+//Form Styles
+@import "unique/_forms";
+
+//Layout Styles
+@import "unique/_layout";
+
+//Icon Styles
+//@import "vendors/_icons";
+

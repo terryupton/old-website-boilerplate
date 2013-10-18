@@ -1,0 +1,1350 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:400,100,300,300italic,400italic,700,700italic");
+@import url("http://fonts.googleapis.com/css?family=Cabin:400,600,700");
+/*---------------------------------------------------
+    STYLES v1.1
+  ---------------------------------------------------
+    initial Setup yo import all our SASS based files.
+
+	by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------*/
+/*---------------------------------------------------
+   RESET STYLES v1.1
+  ---------------------------------------------------
+    A set of common reset styles
+-----------------------------------------------------
+*/
+/* ==========================================================================
+   GLOBAL RESET
+========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* ==========================================================================
+   FORMS
+========================================================================== */
+/*  If no forms, remove these bad boys */
+button, input {
+  line-height: normal; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  *overflow: visible; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*Fonts*/
+/*---------------------------------------------------
+    FRAMEWORK AND BASE STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS framework and base layout styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------
+*/
+/* ==========================================================================
+   FRAMEWORK STYLES
+========================================================================== */
+/* See Normalize for addition resets */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  overflow-y: scroll; }
+
+body {
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #80c342;
+  background-color: #231f20; }
+
+.container {
+  /*padding:0 $base-spacing-unit;
+  @include mq($mobile, false, max) {
+  	padding:0 $half-spacing-unit;
+  }*/
+  width: 95%;
+  max-width: 960px;
+  min-width: 300px;
+  height: auto;
+  margin: 0 auto; }
+
+.container-full-width {
+  width: 100%; }
+
+footer {
+  width: 100%;
+  background-color: #231f20;
+  color: white;
+  padding-top: 24px;
+  padding-top: 1.5rem; }
+
+hr {
+  border: solid rgba(204, 204, 204, 0.5) 0px;
+  border-top: solid rgba(204, 204, 204, 0.5) 2px;
+  height: 0px;
+  clear: both; }
+
+/* ==========================================================================
+   ONE WAY MARGINS
+========================================================================== */
+p, h1, h2, h3, h4, h5, h6, hgroup, dd, figure, pre, table, fieldset, legend, hr {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+
+/* ==========================================================================
+   SELECTION STYLING
+========================================================================== */
+/* This is used to change the highlight colour when selecting text.
+ * Nice bespoke touch to websites.
+ * Full article here: http://davidwalsh.name/css-selection
+ */
+::-moz-selection {
+  background: #80c342;
+  color: white;
+  text-shadow: none; }
+
+::selection {
+  background: #80c342;
+  color: white;
+  text-shadow: none; }
+
+/* ==========================================================================
+   CHROME FRAME PROMPT
+========================================================================== */
+.chromeframe {
+  border: 1px solid #b94a48;
+  border: 0.0625rem solid #b94a48;
+  padding: 11.5px;
+  padding: 0.71875rem;
+  margin-left: 24px;
+  margin-right: 24px;
+  background: #f2dede;
+  color: #b94a48; }
+
+/* ==========================================================================
+   CLEARFIX  STYLES
+========================================================================== */
+/*
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `%cf` class appearing over
+ * and over in your markup.
+ */
+.container:after, header:after, footer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.clear, .signup-form p, .address {
+  clear: both; }
+
+/*---------------------------------------------------
+    HELPER STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS helper styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------*/
+/* ==========================================================================
+   HELPER STYLES
+========================================================================== */
+.margin-top {
+  margin-top: 24px; }
+
+.margin-right {
+  margin-right: 24px; }
+
+.margin-bottom {
+  margin-bottom: 24px; }
+
+.margin-left {
+  margin-left: 24px; }
+
+.half-margin-top {
+  margin-top: 12px; }
+
+.half-margin-right {
+  margin-right: 12px; }
+
+.half-margin-bottom {
+  margin-bottom: 12px; }
+
+.half-margin-left {
+  margin-left: 12px; }
+
+.flush-top {
+  margin-top: 0 !important; }
+
+.flush-right {
+  margin-right: 0 !important; }
+
+.flush-bottom {
+  margin-bottom: 0 !important; }
+
+.flush-left {
+  margin-left: 0 !important; }
+
+.flush {
+  margin: 0 !important; }
+
+.float-right {
+  float: right !important; }
+
+.float-left, .contact, .address {
+  float: left !important; }
+
+.text-left {
+  text-align: left  !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
+
+/* ==========================================================================
+   HIDE STYLES
+========================================================================== */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/*
+ * Image replacement
+ */
+/* ==========================================================================
+   ARROW/TRIANGLE  STYLES
+========================================================================== */
+/*---------------------------------------------------
+    COLOUR STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS colour styles by Terry Upton (Amasci Creative Limited)
+	These should be unique for every project.
+-----------------------------------------------------*/
+/* ==========================================================================
+   COLOUR STYLES
+========================================================================== */
+.base {
+  color: #80c342; }
+
+.sub-color {
+  color: #231f20; }
+
+.required {
+  color: #231f20; }
+
+.error-text {
+  color: #b94a48; }
+
+.success-text {
+  color: #468847; }
+
+.twitter {
+  color: #00aced; }
+
+.facebook {
+  color: #3b5998; }
+
+/*---------------------------------------------------
+    FONT/TYPOGRAPHY STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS font and typography styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------
+*/
+/* ==========================================================================
+   HEADING STYLES
+========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: #231f20;
+  font-family: "Cabin", sans-serif; }
+
+h1, .alpha {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 36px;
+  line-height: 2.25rem;
+  margin-top: 48px;
+  margin-top: 3rem;
+  font-weight: 700; }
+  @media screen and (max-width: 48em) {
+    h1, .alpha {
+      font-size: 27px;
+      font-size: 1.6875rem;
+      line-height: 36px;
+      line-height: 2.25rem; } }
+  @media screen and (max-width: 20em) {
+    h1, .alpha {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 36px;
+      line-height: 2.25rem; } }
+
+h2, .beta {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 36px;
+  line-height: 2.25rem;
+  color: #80c342;
+  font-weight: 600; }
+
+h3, .gamma {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+h4, .delta {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+h5, .epsilon {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+h6, .zeta {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+/* ==========================================================================
+   PARAGRAPH AND LIST STYLES
+========================================================================== */
+p {
+  color: #666666;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+.lead {
+  color: #80c342;
+  font-size: 15.75px;
+  font-size: 0.98438rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+footer p {
+  color: white;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+.caps, h1, .alpha {
+  text-transform: uppercase; }
+
+ul, ol {
+  margin: 12px 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  color: #666666; }
+
+ul {
+  list-style: disc inside; }
+
+ol {
+  list-style: decimal inside; }
+
+ul.square {
+  list-style: square inside; }
+
+ul.circle {
+  list-style: circle inside; }
+
+ul.disc {
+  list-style: disc inside; }
+
+li {
+  margin: 0 24px; }
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 12px; }
+
+.list-col-third {
+  width: 30%;
+  float: left; }
+
+.list-col-half {
+  width: 45%;
+  float: left; }
+
+/* ==========================================================================
+   FONT WEIGHTS AND SIZES
+========================================================================== */
+.extra-light {
+  font-weight: 100; }
+
+.light, ul, ol, .signup-form .subscribe {
+  font-weight: 300; }
+
+.normal {
+  font-weight: 400; }
+
+.bold, .required, .error, strong, b {
+  font-weight: 700; }
+
+.extra-bold {
+  font-weight: 900; }
+
+.xsmall {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+.small, small {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+.large {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 36px;
+  line-height: 2.25rem; }
+
+.xlarge {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 36px;
+  line-height: 2.25rem; }
+
+em, i {
+  font-style: italic; }
+
+sub,
+sup {
+  set-font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/*---------------------------------------------------
+    LINK STYLES v1.1
+  ---------------------------------------------------
+    A set of common and unique links styles by Terry Upton (Amasci Creative Limited)
+	Some of these elements will be unique for every project.
+-----------------------------------------------------*/
+/* ==========================================================================
+   BASE LINK STYLES
+========================================================================== */
+a {
+  color: #80c342;
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ie-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
+  a:hover, a:focus, a:active {
+    color: #3dacd6;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ie-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+
+footer a {
+  color: #80c342;
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ie-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
+  footer a:hover, footer a:focus, footer a:active {
+    color: #3dacd6;
+    text-decoration: underline;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ie-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+
+a[href^="tel:"] {
+  color: #231f20; }
+  footer a[href^="tel:"] {
+    color: white; }
+
+/* ==========================================================================
+   BUTTON STYLES
+========================================================================== */
+.btn, .signup-form .subscribe, a:link.btn, .signup-form a.subscribe:link, a:visited.btn, .signup-form a.subscribe:visited {
+  box-shadow: 0 0 5px 0px #cccccc;
+  background-color: #80c342;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ie-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
+  .btn:hover, .signup-form .subscribe:hover, a:link.btn:hover, .signup-form a.subscribe:link:hover, a:visited.btn:hover, .signup-form a.subscribe:visited:hover {
+    background-color: #3dacd6;
+    color: white;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ie-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+
+/* ==========================================================================
+   SPECIFIC LINK STYLES
+========================================================================== */
+.icon-social {
+  text-decoration: none;
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 48px;
+  line-height: 3rem;
+  position: relative;
+  top: 0px;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ie-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  margin-right: 12px; }
+  .icon-social:hover, .icon-social:focus, .icon-social:active {
+    top: 10px;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ie-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+
+/*---------------------------------------------------
+    Image STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS image styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------
+*/
+/* ==========================================================================
+   IMAGES
+========================================================================== */
+img {
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic; }
+
+/**
+ * Non-fluid images if you specify 'width' and/or 'height' attributes.
+ */
+img[width],
+img[height] {
+  max-width: none; }
+
+/* ==========================================================================
+   PLACEMENTS
+========================================================================== */
+.img-right {
+  float: right;
+  margin-bottom: 24px;
+  margin-left: 24px; }
+
+.img-left {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 24px; }
+
+.img-center, .logo {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-left: auto; }
+
+/* ==========================================================================
+   MISC/UNIQUE STYLES
+========================================================================== */
+/*---------------------------------------------------
+    Print STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS print styles - kindly sourced from Stu Robson - https://github.com/sturobson/a-slightly-bizarre-starting-point
+-----------------------------------------------------*/
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/*---------------------------------------------------
+    FORM STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS form styles by Terry Upton (Amasci Creative Limited)
+	Some of these elements will be unique for every project.
+-----------------------------------------------------*/
+/* ==========================================================================
+   BASE FORM STYLES
+========================================================================== */
+.text-input, .signup-form input[type=text],
+.signup-form input[type=tel],
+.signup-form input[type=email],
+.signup-form select,
+.signup-form textarea {
+  color: #666666;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  padding: 8px 6px;
+  border: 1px solid #cccccc;
+  margin: 2px 0 5px 0;
+  -webkit-appearance: none;
+  outline: none; }
+  .text-input:focus, .signup-form input[type=text]:focus,
+  .signup-form input[type=tel]:focus,
+  .signup-form input[type=email]:focus,
+  .signup-form select:focus,
+  .signup-form textarea:focus {
+    outline: none; }
+
+label {
+  color: #666666;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+.signup-form label {
+  display: none; }
+.signup-form input[type=text],
+.signup-form input[type=tel],
+.signup-form input[type=email],
+.signup-form select,
+.signup-form textarea {
+  width: 90%;
+  margin: 0 0 15px 0;
+  border: 1px solid rgba(204, 204, 204, 0.6);
+  /* WebKit browsers */
+  /* Mozilla Firefox 4 to 18 */
+  /* Mozilla Firefox 19+ */
+  /* Internet Explorer 10+ */
+  box-shadow: 0 0 5px 0px rgba(204, 204, 204, 0.8); }
+  .signup-form input[type=text].error,
+  .signup-form input[type=tel].error,
+  .signup-form input[type=email].error,
+  .signup-form select.error,
+  .signup-form textarea.error {
+    border: 1px solid #b94a48;
+    background-color: #f2dede;
+    color: #b94a48;
+    /* WebKit browsers */
+    /* Mozilla Firefox 4 to 18 */
+    /* Mozilla Firefox 19+ */
+    /* Internet Explorer 10+ */ }
+    .signup-form input[type=text].error::-webkit-input-placeholder,
+    .signup-form input[type=tel].error::-webkit-input-placeholder,
+    .signup-form input[type=email].error::-webkit-input-placeholder,
+    .signup-form select.error::-webkit-input-placeholder,
+    .signup-form textarea.error::-webkit-input-placeholder {
+      color: rgba(185, 74, 72, 0.6); }
+    .signup-form input[type=text].error:-moz-placeholder,
+    .signup-form input[type=tel].error:-moz-placeholder,
+    .signup-form input[type=email].error:-moz-placeholder,
+    .signup-form select.error:-moz-placeholder,
+    .signup-form textarea.error:-moz-placeholder {
+      color: #b94a48; }
+    .signup-form input[type=text].error::-moz-placeholder,
+    .signup-form input[type=tel].error::-moz-placeholder,
+    .signup-form input[type=email].error::-moz-placeholder,
+    .signup-form select.error::-moz-placeholder,
+    .signup-form textarea.error::-moz-placeholder {
+      color: #b94a48; }
+    .signup-form input[type=text].error:-ms-input-placeholder,
+    .signup-form input[type=tel].error:-ms-input-placeholder,
+    .signup-form input[type=email].error:-ms-input-placeholder,
+    .signup-form select.error:-ms-input-placeholder,
+    .signup-form textarea.error:-ms-input-placeholder {
+      color: #b94a48; }
+  .signup-form input[type=text]:focus,
+  .signup-form input[type=tel]:focus,
+  .signup-form input[type=email]:focus,
+  .signup-form select:focus,
+  .signup-form textarea:focus {
+    border: 1px solid #231f20;
+    background-color: #231f20;
+    color: white;
+    outline: none;
+    /* WebKit browsers */
+    /* Mozilla Firefox 4 to 18 */
+    /* Mozilla Firefox 19+ */
+    /* Internet Explorer 10+ */ }
+    .signup-form input[type=text]:focus::-webkit-input-placeholder,
+    .signup-form input[type=tel]:focus::-webkit-input-placeholder,
+    .signup-form input[type=email]:focus::-webkit-input-placeholder,
+    .signup-form select:focus::-webkit-input-placeholder,
+    .signup-form textarea:focus::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.6); }
+    .signup-form input[type=text]:focus:-moz-placeholder,
+    .signup-form input[type=tel]:focus:-moz-placeholder,
+    .signup-form input[type=email]:focus:-moz-placeholder,
+    .signup-form select:focus:-moz-placeholder,
+    .signup-form textarea:focus:-moz-placeholder {
+      color: white; }
+    .signup-form input[type=text]:focus::-moz-placeholder,
+    .signup-form input[type=tel]:focus::-moz-placeholder,
+    .signup-form input[type=email]:focus::-moz-placeholder,
+    .signup-form select:focus::-moz-placeholder,
+    .signup-form textarea:focus::-moz-placeholder {
+      color: white; }
+    .signup-form input[type=text]:focus:-ms-input-placeholder,
+    .signup-form input[type=tel]:focus:-ms-input-placeholder,
+    .signup-form input[type=email]:focus:-ms-input-placeholder,
+    .signup-form select:focus:-ms-input-placeholder,
+    .signup-form textarea:focus:-ms-input-placeholder {
+      color: white; }
+  .signup-form input[type=text]::-webkit-input-placeholder,
+  .signup-form input[type=tel]::-webkit-input-placeholder,
+  .signup-form input[type=email]::-webkit-input-placeholder,
+  .signup-form select::-webkit-input-placeholder,
+  .signup-form textarea::-webkit-input-placeholder {
+    color: rgba(102, 102, 102, 0.6); }
+  .signup-form input[type=text]:-moz-placeholder,
+  .signup-form input[type=tel]:-moz-placeholder,
+  .signup-form input[type=email]:-moz-placeholder,
+  .signup-form select:-moz-placeholder,
+  .signup-form textarea:-moz-placeholder {
+    color: #666666; }
+  .signup-form input[type=text]::-moz-placeholder,
+  .signup-form input[type=tel]::-moz-placeholder,
+  .signup-form input[type=email]::-moz-placeholder,
+  .signup-form select::-moz-placeholder,
+  .signup-form textarea::-moz-placeholder {
+    color: #666666; }
+  .signup-form input[type=text]:-ms-input-placeholder,
+  .signup-form input[type=tel]:-ms-input-placeholder,
+  .signup-form input[type=email]:-ms-input-placeholder,
+  .signup-form select:-ms-input-placeholder,
+  .signup-form textarea:-ms-input-placeholder {
+    color: #666666; }
+.signup-form .subscribe {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+/* ==========================================================================
+   ERROR STYLES
+========================================================================== */
+.error {
+  color: #b94a48;
+  float: left;
+  margin: 4px 0 12px 0;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+
+.Rectangle_1_copy {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e5e5e5;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px;
+  position: absolute;
+  left: 837px;
+  top: 605px;
+  width: 251px;
+  height: 33px;
+  z-index: 40; }
+
+/*---------------------------------------------------
+    Layout STYLES v1.1
+  ---------------------------------------------------
+    A set of unique SASS layout styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------
+*/
+/* ==========================================================================
+   LAYOUT STYLES
+========================================================================== */
+/* See Normalize for addition resets */
+.wrapper {
+  background-color: white;
+  padding-top: 24px;
+  padding-top: 1.5rem;
+  padding-bottom: 24px;
+  padding-bottom: 1.5rem; }
+
+main {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 65.27778%; }
+  @media only screen and (max-width: 767px) {
+    main {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    main {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 47.26667%; } }
+
+aside {
+  display: block;
+  float: left;
+  margin-left: 69.44444%;
+  margin-right: -100%;
+  width: 30.55556%;
+  background-image: url("/images/main.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 384px;
+  padding-top: 24rem; }
+  @media only screen and (max-width: 767px) {
+    aside {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 3.125%;
+      padding-right: 3.125%;
+      background-image: none;
+      padding-top: 0px;
+      padding-top: 0rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    aside {
+      display: block;
+      float: left;
+      margin-left: 52.475%;
+      margin-right: -100%;
+      width: 47.4599%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 2.60417%;
+      padding-right: 2.60417%; } }
+
+/* ==========================================================================
+   MISC STYLES
+========================================================================== */
+.contact, .address {
+  margin-right: 48px;
+  color: #231f20; }
+
+.address {
+  margin-right: 5px; }
+
+/*---------------------------------------------------
+    Icon STYLES v1.1
+  ---------------------------------------------------
+    A set of unquie icons styles by Terry Upton (Amasci Creative Limited)
+	These elements will be unique for every project.
+
+	Icons from http://icomoon.io/ - icon set IcoMoon - Free
+
+-----------------------------------------------------*/
+@font-face {
+  font-family: 'entypo';
+  src: url("/assets/fonts/entypo.eot");
+  src: url("/assets/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/entypo.woff") format("woff"), url("/assets/fonts/entypo.ttf") format("truetype"), url("/assets/fonts/entypo.svg#entypo") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'entypo';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-phone, .icon-email, .icon-address, .icon-twitter, .icon-facebook, .icon-warning {
+  font-family: 'entypo';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 2px; }
+
+.icon-phone:before {
+  content: "\e000"; }
+
+.icon-email:before {
+  content: "\e001"; }
+
+.icon-address:before {
+  content: "\e002"; }
+
+.icon-twitter:before {
+  content: "\e003"; }
+
+.icon-facebook:before {
+  content: "\e004"; }
+
+.icon-warning:before {
+  content: "\e005"; }

@@ -1,0 +1,92 @@
+/*---------------------------------------------------
+    FORM STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS form styles by Terry Upton (Amasci Creative Limited)
+	Some of these elements will be unique for every project.
+-----------------------------------------------------*/
+
+/* ==========================================================================
+   BASE FORM STYLES
+========================================================================== */
+
+.text-input {color: $text-color;  @include set-font-size(14px); padding:8px 6px; border:1px solid rgba($grey, 1); margin:2px 0 5px 0; -webkit-appearance: none; outline: none;
+	&:focus {outline: none;}
+}
+
+
+label {color:$text-color; @include set-font-size(14px);}
+
+.signup-form {
+	label {display:none;}
+	input[type=text],
+	input[type=tel],
+	input[type=email],
+	select,
+	textarea {
+		width:90%;
+		@extend .text-input;
+		margin:0 0 15px 0;
+		border:1px solid rgba($grey, .6);
+
+		&.error {
+			border: 1px solid $error-color;
+			background-color: $error-background;
+			color: $error-color;
+			@include placeholder($error-color)
+		}
+
+		&:focus {
+			border:1px solid $sub-color;
+			background-color: $sub-color;
+			color:$white;
+			outline: none;
+
+			@include placeholder($white)
+
+		}
+
+		@include placeholder();
+		@include box-shadow(0, 0, 5px, 0px, rgba($grey, .8));
+
+	}
+
+	p {
+		@extend .clear
+	}
+
+	.subscribe {
+		@include set-font-size(16px);
+		@extend .btn;
+		@extend .light;
+		padding-left:20px; padding-right:20px;
+	}
+
+}
+
+/* ==========================================================================
+   ERROR STYLES
+========================================================================== */
+
+.error {
+  color: $error-color;
+  float: left;
+  margin: 4px 0 $half-spacing-unit 0;
+  @extend .bold;
+  @include set-font-size(13px);
+}
+
+
+
+.Rectangle_1_copy {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb( 229, 229, 229 );
+  background-color: rgb( 255, 255, 255 );
+  box-shadow: 0px 0px 5px 0px ;
+  position: absolute;
+  left: 837px;
+  top: 605px;
+  width: 251px;
+  height: 33px;
+  z-index: 40;
+}

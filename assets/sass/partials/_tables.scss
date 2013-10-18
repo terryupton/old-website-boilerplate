@@ -1,0 +1,81 @@
+/*---------------------------------------------------
+    TABLE STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS tables styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------*/
+
+/* ==========================================================================
+   BASE TABLE
+========================================================================== */
+
+table {
+width : 100%;
+max-width : 100%;
+margin-bottom : $base-spacing-unit;
+background-color : $white;
+
+	th,
+	td {
+		padding : 10px;
+		vertical-align : top;
+		border-top : 1px solid $grey;
+		@include set-font-size(14px);
+		color:$text-color;
+		@extend .text-left;
+	}
+
+	th {
+		@extend .bold;
+		@include set-font-size(14px);
+		background-color:$base-color;
+		color:$white;
+	}
+
+	thead th {
+	vertical-align : bottom;
+	}
+
+	thead:first-child tr:first-child th,
+	thead:first-child tr:first-child td {
+		border-top : 0;
+	}
+
+	tbody tr td,
+	tbody tr th {
+		@include transition(background-color .25s linear);
+	}
+
+}
+
+/* ==========================================================================
+   BORDERED TABLE
+========================================================================== */
+
+.table-bordered {
+	border : 1px solid $grey;
+	border-left : 0;
+	border-collapse : separate;
+	*border-collapse : collapsed;
+
+	th,
+	td {
+		border-left :  1px solid $grey;
+		}
+
+	thead:first-child tr:first-child th,
+	tbody:first-child tr:first-child th,
+	tbody:first-child tr:first-child td {
+		border-top : 0;
+	}
+}
+
+/* ==========================================================================
+   STRIPED TABLE
+========================================================================== */
+
+.table-striped {
+	tbody tr:nth-child(odd) td {
+		background-color : rgba($grey, .3);
+		}
+}
+

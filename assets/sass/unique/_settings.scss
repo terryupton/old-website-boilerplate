@@ -1,0 +1,65 @@
+//*---------------------------------------------------
+//   SETTING STYLES v1.1
+// ---------------------------------------------------
+//   A set of unique SASS font/typography and colour styles by Terry Upton (Amasci Creative Limited)
+//	These will be unique for every project.
+//-----------------------------------------------------*/
+
+//* ==========================================================================
+//   PROJECT SPECIFIC FONTS and BASELINES
+//========================================================================== */
+
+/*Fonts*/
+$font-header:				'Cabin', sans-serif;
+$font-body:					'Lato', sans-serif;
+
+$base-font-size:			16px;
+$base-line-height:			24px;
+
+$base-spacing-unit: 		$base-line-height!default;
+$half-spacing-unit: 		$base-spacing-unit / 2!default;
+
+
+$h1-font-size:				30px;
+$h2-font-size:				21px;
+$h3-font-size:				18px;
+$h4-font-size:				$base-font-size;
+$h5-font-size:				14px;
+$h6-font-size:				12px;
+
+$p-font-size:				14px;
+$footer-font-size:			12px;
+
+
+//* ==========================================================================
+//   BASE COLOURS
+//========================================================================== */
+
+$base-color:				#80c342;
+$sub-color:					#231f20;
+
+$link-color:				$base-color;
+$hover-color:				#3dacd6;
+
+$text-color:				#666;
+$text-header-color:			$base-color;
+
+$black: 					$sub-color;
+$white: 					#FFF;
+$grey: 						#CCC;
+
+$error-color: 				#b94a48;
+$error-background: 			#f2dede;
+
+$success-color: 			#468847;
+$success-background: 		#dff0d8;
+
+
+
+//* ==========================================================================
+//   BREAK POINTS
+//========================================================================== */
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 960px;

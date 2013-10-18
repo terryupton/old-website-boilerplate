@@ -1,0 +1,124 @@
+/*---------------------------------------------------
+    FONT/TYPOGRAPHY STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS font and typography styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------
+*/
+
+/* ==========================================================================
+   HEADING STYLES
+========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+	color:$text-header-color;
+	font-family:$font-header;
+}
+
+h1, .alpha 		{
+	@include set-font-size($h1-font-size);
+	@include leader(2);
+	@extend .caps;
+	font-weight:700;
+
+	@include mq($tablet, false, max) {
+		@include set-font-size($h1-font-size*0.9);
+	}
+
+	@include mq($mobile, false, max) {
+		@include set-font-size($h1-font-size*0.8);
+	}
+
+}
+h2, .beta		{
+	@include set-font-size($h2-font-size);
+}
+h3, .gamma		{@include set-font-size($h3-font-size);}
+h4, .delta		{@include set-font-size($h4-font-size);}
+h5, .epsilon	{@include set-font-size($h5-font-size);}
+h6, .zeta		{@include set-font-size($h6-font-size);}
+
+
+/* ==========================================================================
+   PARAGRAPH AND LIST STYLES
+========================================================================== */
+
+p {
+	color:$text-color;
+	@include set-font-size($p-font-size);
+}
+
+.lead {
+	color:$base-color;
+	@include set-font-size($p-font-size * 1.125);
+}
+
+footer p {
+	color:$white;
+	@include set-font-size($footer-font-size);
+}
+
+.caps {text-transform:uppercase;}
+
+
+ul, ol {
+	margin: $half-spacing-unit 0;
+	@extend .light;
+	@include set-font-size($p-font-size);
+	color:$text-color;
+}
+
+ul 			{list-style: disc inside;}
+ol 			{list-style: decimal inside;}
+
+ul.square	{list-style: square inside;}
+ul.circle 	{list-style: circle inside;}
+ul.disc 	{list-style: disc inside;}
+
+li			{margin:0 $base-spacing-unit;}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul 		{margin: $half-spacing-unit;}
+
+// Mixin to float lists in a row, define the list width in the include
+// 30% 3 Col
+
+@mixin list-col($col-list-width) {
+	width:$col-list-width;
+	float:left;
+}
+
+.list-col-third 	{@include list-col(30%);}
+.list-col-half 		{@include list-col(45%);}
+
+
+/* ==========================================================================
+   FONT WEIGHTS AND SIZES
+========================================================================== */
+
+.extra-light 		{font-weight:100;}
+.light 				{font-weight:300;}
+.normal 			{font-weight:400;}
+.bold, strong, b 	{font-weight:700;}
+.extra-bold 		{font-weight:900;}
+
+
+.xsmall 			{@include set-font-size(11px);}
+.small, small 		{@include set-font-size(13px);}
+.large 				{@include set-font-size(21px);}
+.xlarge 			{@include set-font-size(30px);}
+
+em, i 				{font-style:italic;}
+
+
+sub,
+sup {
+    set-font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup 				{top: -0.5em;}
+sub 				{bottom: -0.25em;}

@@ -1,0 +1,140 @@
+/*---------------------------------------------------
+    FRAMEWORK AND BASE STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS framework and base layout styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------
+*/
+
+
+/* ==========================================================================
+   FRAMEWORK STYLES
+========================================================================== */
+/* See Normalize for addition resets */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+}
+
+body
+{
+	margin:0 auto;
+	font-family:$font-body;
+	font-size:$base-font-size;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color:$base-color;
+	background-color:$sub-color;
+}
+
+.container{
+	@extend %cf;
+	/*padding:0 $base-spacing-unit;
+	@include mq($mobile, false, max) {
+		padding:0 $half-spacing-unit;
+	}*/
+	width:95%;
+	max-width:$desktop;
+	min-width:300px;
+	height:auto;
+	margin:0 auto;
+}
+
+.container-full-width	{width:100%}
+
+header {
+	@extend %cf;
+}
+
+footer {
+	width:100%;
+	background-color:$sub-color; color:$white;
+	@include padding-leader();
+	@extend %cf;
+}
+
+
+main {
+}
+
+aside {
+
+}
+
+hr {
+	border: solid rgba($grey, .5) 0px;
+	border-top:solid rgba($grey, .5) 2px;
+	height:0px;
+	clear:both;
+}
+
+%col-third 	{@include cols(3, $base-spacing-unit);}
+%col-half 	{@include cols();}
+
+
+/* ==========================================================================
+   ONE WAY MARGINS
+========================================================================== */
+
+p, h1, h2, h3, h4, h5, h6, hgroup, dd, figure, pre, table, fieldset, legend, hr {
+	@include trailer();
+}
+
+/* ==========================================================================
+   SELECTION STYLING
+========================================================================== */
+/* This is used to change the highlight colour when selecting text.
+ * Nice bespoke touch to websites.
+ * Full article here: http://davidwalsh.name/css-selection
+ */
+
+::-moz-selection {
+	background: $base-color;
+	color: $white;
+	text-shadow: none;
+}
+
+::selection {
+	background: $base-color;
+	color: $white;
+	text-shadow: none;
+}
+
+
+/* ==========================================================================
+   CHROME FRAME PROMPT
+========================================================================== */
+
+.chromeframe {
+	@include rhythm-borders(0.5, 1px solid $error-color);
+
+	margin-left:$base-spacing-unit;
+	margin-right:$base-spacing-unit;
+
+    background: $error-background;
+    color: $error-color;
+
+
+
+}
+
+/* ==========================================================================
+   CLEARFIX  STYLES
+========================================================================== */
+/*
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `%cf` class appearing over
+ * and over in your markup.
+ */
+
+%cf{
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}

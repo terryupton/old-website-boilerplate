@@ -1,0 +1,52 @@
+/*---------------------------------------------------
+    Image STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS image styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------
+*/
+
+/* ==========================================================================
+   IMAGES
+========================================================================== */
+img{
+    max-width:100%;
+	-ms-interpolation-mode: bicubic;
+}
+
+/**
+ * Non-fluid images if you specify 'width' and/or 'height' attributes.
+ */
+img[width],
+img[height]{
+    max-width:none;
+}
+
+
+/* ==========================================================================
+   PLACEMENTS
+========================================================================== */
+.img-right{
+    float:right;
+    margin-bottom:$base-spacing-unit;
+    margin-left:$base-spacing-unit;
+}
+.img-left{
+    float:left;
+    margin-right:$base-spacing-unit;
+    margin-bottom:$base-spacing-unit;
+}
+.img-center{
+    display:block;
+    margin-right:auto;
+    margin-bottom:$base-spacing-unit;
+    margin-left:auto;
+}
+
+
+/* ==========================================================================
+   MISC/UNIQUE STYLES
+========================================================================== */
+
+.logo {
+  @extend .img-center;
+}

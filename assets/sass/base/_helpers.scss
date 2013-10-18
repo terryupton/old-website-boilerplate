@@ -1,0 +1,128 @@
+/*---------------------------------------------------
+    HELPER STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS helper styles by Terry Upton (Amasci Creative Limited)
+-----------------------------------------------------*/
+
+/* ==========================================================================
+   HELPER STYLES
+========================================================================== */
+
+.margin-top 			{margin-top:$base-spacing-unit;}
+.margin-right 			{margin-right:$base-spacing-unit;}
+.margin-bottom 			{margin-bottom:$base-spacing-unit;}
+.margin-left 			{margin-left:$base-spacing-unit;}
+
+.half-margin-top 		{margin-top:$half-spacing-unit;}
+.half-margin-right 		{margin-right:$half-spacing-unit;}
+.half-margin-bottom 	{margin-bottom:$half-spacing-unit;}
+.half-margin-left 		{margin-left:$half-spacing-unit;}
+
+.flush-top 				{margin-top:0 !important;}
+.flush-right 			{margin-right:0 !important;}
+.flush-bottom 			{margin-bottom:0 !important;}
+.flush-left 			{margin-left:0 !important;}
+.flush 					{margin:0 !important;}
+
+.float-right   			{ float:right!important; }
+.float-left    			{ float:left !important; }
+
+.text-left     			{ text-align:left  !important; }
+.text-center   			{ text-align:center!important; }
+.text-right    			{ text-align:right !important; }
+
+%muted					{@include opacity(0.5);}
+
+
+/* ==========================================================================
+   HIDE STYLES
+========================================================================== */
+
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+%visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+    .focusable {
+	    &:active, &:focus {
+			clip: auto;
+		    height: auto;
+		    margin: 0;
+		    overflow: visible;
+		    position: static;
+		    width: auto;
+	    }
+    }
+}
+
+
+
+/*
+ * Image replacement
+ */
+
+%ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   ARROW/TRIANGLE  STYLES
+========================================================================== */
+
+%arrow-up {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+
+	border-bottom: 10px solid $white;
+}
+
+%arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+
+	border-top: 20px solid #f00;
+}
+
+%arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+
+	border-left: 60px solid green;
+}
+
+%arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+
+	border-right:10px solid blue;
+}

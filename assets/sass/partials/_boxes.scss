@@ -1,0 +1,26 @@
+/*---------------------------------------------------
+    BOX and SHADOWS STYLES v1.1
+  ---------------------------------------------------
+    A set of common SASS box styles by Terry Upton (Amasci Creative Limited)
+	Some of these elements will be unique for every project.
+-----------------------------------------------------*/
+
+/* ==========================================================================
+   BOXES
+========================================================================== */
+
+.box {
+	margin-bottom:$base-spacing-unit;
+	padding:$base-spacing-unit;
+
+	border:5px solid $white;
+	background-color:$base-color;
+}
+
+
+/* ==========================================================================
+   STYLING
+========================================================================== */
+
+.shadow {@include box-shadow();}
+.round {@include rounded();}
