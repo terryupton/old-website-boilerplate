@@ -1,0 +1,46 @@
+{
+  "convertHtmlOutput": null,
+  "customRubyPath": null,
+  "debug": false,
+  "domain": null,
+  "followLeader": true,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": "assets",
+  "preprocessorScriptOutput": "assets/js",
+  "preprocessorStyleOutput": "assets/css",
+  "projectDescription": "Proejct Description",
+  "projectName": "domain.com",
+  "publishedId": null,
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": "domain.loc",
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "simple",
+  "useCompass": false,
+
+  "customTodos": [
+    {
+      "fileTypes": "php,js",
+      "regex": "(?<=/[*] TODO:).*?(?=[*]/)"
+    },
+    {
+      "fileTypes": "php",
+      "regex": "(?<=<!-- TODO:).*?(?=-->)"
+    }
+  ],
+
+  "autoPrefixer": {
+    "active": true,
+      "browsers": [
+          "last 2 version",
+          "> 1%",
+          "ie 8"
+      ]
+  }
+
+
+
+}
