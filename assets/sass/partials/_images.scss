@@ -26,20 +26,20 @@ img[height]{
    PLACEMENTS
 ========================================================================== */
 .img-right{
-    float:right;
-    margin-bottom:$base-spacing-unit;
-    margin-left:$base-spacing-unit;
+  @include trailer;
+  @include px-rem(margin-left, 1.5);
+  float:right;
 }
 .img-left{
     float:left;
-    margin-right:$base-spacing-unit;
-    margin-bottom:$base-spacing-unit;
+  @include trailer;
+  @include px-rem(margin-might, 1.5);
 }
 .img-center{
-    display:block;
-    margin-right:auto;
-    margin-bottom:$base-spacing-unit;
-    margin-left:auto;
+  @include trailer;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
 }
 
 

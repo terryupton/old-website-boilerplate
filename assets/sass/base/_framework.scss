@@ -12,7 +12,7 @@
 /* See Normalize for addition resets */
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  box-sizing: border-box;
  }
 
 html {
@@ -26,17 +26,12 @@ body
 	font-family:$font-body;
 	font-size:$base-font-size;
 	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
 	color:$base-color;
 	background-color:$sub-color;
 }
 
 .container{
 	@extend %cf;
-	/*padding:0 $base-spacing-unit;
-	@include mq($mobile, false, max) {
-		padding:0 $half-spacing-unit;
-	}*/
 	width:95%;
 	max-width:$desktop;
 	min-width:300px;
@@ -51,10 +46,11 @@ header {
 }
 
 footer {
-	width:100%;
-	background-color:$sub-color; color:$white;
 	@include padding-leader();
 	@extend %cf;
+	width:100%;
+	background-color:$sub-color;
+	color:$white;
 }
 
 
@@ -65,6 +61,56 @@ aside {
 
 }
 
+
+
+// HTML5 Native Accordion
+// Use details & summary to create an interactive widget that shows and hides
+// some content. JavaScript fallback for older browsers.
+// -----------------------------------------------------------------------------------
+details {
+	@include leader;
+	@extend .margin-left;
+	@extend .margin-right;
+	border-bottom:1px solid $grey;
+
+	&:nth-of-type(even) {
+		background-color:lighten($grey, 15%);
+	}
+
+	&:first-of-type {
+		padding-top:0;
+	}
+}
+
+summary {
+	@include trailer();
+	@include set-font-size(16px);
+	color:$base-color;
+    display:block;
+    cursor: pointer;
+    outline: 0;
+
+	&:focus {
+		-webkit-appearance: none;
+		outline: none;
+		color:$sub-color;
+	}
+
+    &:before {
+        content: "[+] ";
+    }
+
+    details[open] &:before,
+    .open &:before {
+        content: "[–] ";
+    }
+
+}
+
+//This hides the default arrow
+details summary::-webkit-details-marker { display:none; }
+
+
 hr {
 	border: solid rgba($grey, .5) 0px;
 	border-top:solid rgba($grey, .5) 2px;
@@ -72,8 +118,24 @@ hr {
 	clear:both;
 }
 
-%col-third 	{@include cols(3, $base-spacing-unit);}
-%col-half 	{@include cols();}
+
+
+%col-half 	{
+	column-count:2;
+	column-gap:1.5rem;
+}
+
+
+%col-thirds {
+	column-count:3;
+	column-gap:1.5rem;
+}
+
+
+%col-quarters {
+	column-count:4;
+	column-gap:1.5rem;
+}
 
 
 /* ==========================================================================
@@ -111,15 +173,10 @@ p, h1, h2, h3, h4, h5, h6, hgroup, dd, figure, pre, table, fieldset, legend, hr 
 
 .chromeframe {
 	@include rhythm-borders(0.5, 1px solid $error-color);
-
-	margin-left:$base-spacing-unit;
-	margin-right:$base-spacing-unit;
-
+	@extend .margin-right;
+	@extend .margin-left;
     background: $error-background;
     color: $error-color;
-
-
-
 }
 
 /* ==========================================================================

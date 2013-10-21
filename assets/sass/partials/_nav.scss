@@ -6,94 +6,198 @@
 -----------------------------------------------------*/
 
 /* ==========================================================================
-   NAV STYLES
+   NAV BUTTON
 ========================================================================== */
-/* Nav Clases as taken from Inuit CSS
- * http://inuitcss.com
- * Example sof these working here - Demo: jsfiddle.net/inuitcss/Vnph4
- */
 
-/* Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
- */
+.menu-link, .menu-link:hover {
+	color:$white;
+	display: block;
+	float: right;
+	text-decoration: none;
 
-
-.nav {
-    list-style:none;
-    margin:0; /* added by me */
-    padding:0; /* added by me */
-    @extend %cf;
-
-    > li {
-        &,
-        > a {
-            display:inline-block;
-           *display:inline;
-            zoom:1;
-            text-decoration:none; /* added by me */
-            padding:5px 8px;
-        }
-
-        &.current > a {text-decoration:none; background-color:$hover-color; color:$white; padding:5px 8px; @include rounded(6px);} /* added by me */
-        &:first-child {margin-left:0px;}
-    }
-}
-
-/* ==========================================================================
-   SPECIFIC NAV CLASSES
-========================================================================== */
-/*  Per Proejct - but classes remian
- * E.G main-menu, footer-menu, side-menu etc
- */
-
-.main-menu {
-
-	position:relative; top:270px;
-	@extend .container-full-width;
-	background-color: $white;
-
-	ul {
-		@extend .nav;
-		padding:$half-spacing-unit 0;
-		width:950px;
-		margin:auto;
+	&:before {
+		@include set-font-size(21px);
+		@extend .icon-menu;
+		content: "\e000";
+		margin-right:2px;
+		position:relative;
+		top:2px;
 	}
 
+	&:after {
+		content: 'Menu'
+	}
+
+	span {
+		@extend %visually-hidden;
+	}
+
+	@include mq(705px, false, min) {
+		display: none;
+	}
 }
 
-.footer-menu {
+.menu-link-active, .menu-link-active:hover {
+		color:$base-color;
+		@extend .icon-close;
+
+	&:before {
+		@include set-font-size(21px);
+		@extend .icon-close;
+		content: "\e017";
+		margin-right:2px;
+		position:relative;
+		top:2px;
+	}
+
+		&:after {
+			content: 'Close'
+		}
+
+}
+
+
+/* ==========================================================================
+   MAIN NAV
+========================================================================== */
+
+
+.main-menu {
+	@include transition(all, .60s, ease);
+	@extend .container;
+	position:absolute;
+	top:45px;
+	z-index:1000;
+	width:100%;
+
+
+	@include mq(705px, false, min) {
+		clear:both;
+		position:relative;
+		top:0;
+	}
+
+
+	@include mq(704px, false, max) {
+		max-height: 0;
+		overflow: hidden;
+	}
+
 
 	ul {
-		@extend .nav;
+		@extend .text-center;
+		@include trailer();
+		list-style:none;
+		padding:0;
+
 	}
 
 	li {
-		padding:0;
-		margin:0 8px;
-		@include set-font-size($footer-font-size);
-	}
 
+		@include set-font-size(18px);
+		font-family:$font-header;
+		font-weight:400;
+
+		@include mq(704px, false, max) {
+			&:first-child > a  {
+				border-top:1px solid $white;
+			}
+
+			> a {
+				color:$white;
+				background-color:$black;
+				padding:10px 0;
+				display:block;
+				border-bottom:1px solid;
+
+				&:hover,&:focus,&:active,
+				&.current {
+					color:$white;
+					background-color:$sub-color;
+					text-decoration: none;
+				}
+			}
+		}
+
+		@include mq(705px, false, min) {
+
+				display:inline-block;
+		        *display:inline;
+		         zoom:1;
+
+				> a {
+					color:$white;
+					background-color:inherit;
+					padding:0 15px;
+					border-bottom:0;
+
+					&:hover,&:focus,&:active,
+					&.current {
+						color:lighten($base-color, 20%);
+						background-color:inherit;
+					}
+				}
+		}
+
+		@include mq(890px, false, min) {
+			> a { padding:0 30px}
+		}
+	}
 }
 
 /* ==========================================================================
    RWD NAV - HIDE
 ========================================================================== */
-/*
-nav[role=navigation] {
-	clear: both;
-	@include vendor(transition, all 0.6s linear);
-}
-.js nav[role=navigation] {
-	overflow: hidden;
-	max-height: 0;
-}
-nav[role=navigation].active {
+//This shows the menu on mobile view. Appended using JS
+.active {
 	max-height: 20em;
 }
 
-@media only screen and (min-width: 960px) {
-	.js nav[role=navigation] {
-		max-height: none;
+
+/* ==========================================================================
+   FOOTER NAV
+========================================================================== */
+
+.footer-menu {
+	@include gs-span(m,all);
+	background-color:$black;
+
+	ul {
+		@extend .text-center;
+		list-style:none;
+		padding:15px 0;
+
+		@include mq(990px, false, min) {
+			text-align:left !important;
+			width:990px;
+			margin:auto;
+		}
+
 	}
+
+	li {
+		@include set-font-size(12px);
+		display:inline-block;
+		*display:inline;
+		zoom:1;
+		padding:0 10px;
+
+		> a {
+			color:$white;
+
+			&:hover,&:focus,&:active {
+				color:lighten($base-color, 20%);
+				text-decoration: none;
+			}
+		}
+
+		@include mq(705px, false, min) {
+			padding:0 15px;
+		}
+
+	@include mq(989px, false, min) {
+			padding:0 30px;
+		}
+	}
+
 }
-*/

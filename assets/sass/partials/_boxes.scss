@@ -16,11 +16,3 @@
 	border:5px solid $white;
 	background-color:$base-color;
 }
-
-
-/* ==========================================================================
-   STYLING
-========================================================================== */
-
-.shadow {@include box-shadow();}
-.round {@include rounded();}

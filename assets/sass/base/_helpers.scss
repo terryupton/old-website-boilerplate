@@ -8,15 +8,15 @@
    HELPER STYLES
 ========================================================================== */
 
-.margin-top 			{margin-top:$base-spacing-unit;}
-.margin-right 			{margin-right:$base-spacing-unit;}
-.margin-bottom 			{margin-bottom:$base-spacing-unit;}
-.margin-left 			{margin-left:$base-spacing-unit;}
+.margin-top 			{@include leader(); }
+.margin-right 			{margin-right:24px; margin-right:1.5rem;}
+.margin-bottom 			{@include trailer();}
+.margin-left 			{margin-left:24px; margin-right:1.5rem;}
 
-.half-margin-top 		{margin-top:$half-spacing-unit;}
-.half-margin-right 		{margin-right:$half-spacing-unit;}
-.half-margin-bottom 	{margin-bottom:$half-spacing-unit;}
-.half-margin-left 		{margin-left:$half-spacing-unit;}
+.half-margin-top 		{@include leader(0.5);
+.half-margin-right 		{margin-right:12px; margin-right:0.75rem;}
+.half-margin-bottom 	{@include trailer(0.5);}
+.half-margin-left 		{margin-left:12px; margin-right:0.75rem;}
 
 .flush-top 				{margin-top:0 !important;}
 .flush-right 			{margin-right:0 !important;}
@@ -33,6 +33,30 @@
 
 %muted					{@include opacity(0.5);}
 
+
+/* ==========================================================================
+   STYLING
+========================================================================== */
+
+//$horizontal  $vertical  $blur  $spread  $color;
+%shadow {
+	box-shadow:0 0 4px 2px $grey;
+}
+
+//$horizontal  $vertical  $blur  $spread  $color;
+%inner-shadow {
+	box-shadow: inset 0 0 4px $grey;
+}
+
+//Makes Whole Box Rounded
+%round {
+	border-radius:10px;
+}
+
+// Border Radius To define each corner
+%border-radius {
+	border-radius: 10px 10px 10px 10px;
+}
 
 /* ==========================================================================
    HIDE STYLES
@@ -74,8 +98,6 @@
 	    }
     }
 }
-
-
 
 /*
  * Image replacement
@@ -125,4 +147,11 @@
 	border-bottom: 10px solid transparent;
 
 	border-right:10px solid blue;
+}
+
+
+// Add an arrow ">" before the text
+%arrow-before:before {
+    content: ">";
+    @include px-rem(margin-right, 0.5);
 }

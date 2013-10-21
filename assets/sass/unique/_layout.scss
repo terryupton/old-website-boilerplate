@@ -12,9 +12,8 @@
 /* See Normalize for addition resets */
 
 .wrapper {
+	@include rhythm-spacing();
 	background-color:$white;
-	@include padding-leader();
-	@include padding-trailer();
 }
 
 /*main {
@@ -51,6 +50,10 @@ aside {
 }*/
 
 
+/* ==========================================================================
+   PAGENAME STYLES
+========================================================================== */
+
 
 
 
@@ -58,14 +61,36 @@ aside {
 /* ==========================================================================
    MISC STYLES
 ========================================================================== */
-.contact {
+
+%contact {
 	@extend .float-left;
+	@extend .delta;
 	margin-right: $base-spacing-unit*2;
-	color:$sub-color;
+
 }
 
-.address {
-	@extend .contact;
-	margin-right:5px;
-	@extend .clear;
+.tel, {
+	@extend %contact;
 }
+
+
+.address {
+	@extend %contact;
+	@extend .clear;
+	margin-right:5px;
+}
+
+.address-text {
+	@extend %contact;
+	@extend .small;
+}
+
+.email {
+	@extend %contact;
+}
+
+// TODO: Remove this class and source code once client has provided contents.
+.input-rqd {
+	color:#fa621f;
+}
+

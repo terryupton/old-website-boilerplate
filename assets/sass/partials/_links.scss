@@ -10,7 +10,8 @@
 ========================================================================== */
 
 a {
-	@include transition(all, .60s, ease);
+	// Property, Duration, Animation Type
+	transition: all .60s ease;
 	color:$link-color; text-decoration:none;
 	&:hover,&:focus,&:active {
 		@include transition(all, .60s, ease);
@@ -21,7 +22,7 @@ a {
 }
 
 footer a {
-	@include transition(all, .60s, ease);
+	transition: all .60s ease;
 	color:$link-color; text-decoration:none;
 	&:hover,&:focus,&:active {
 		color:$hover-color;
@@ -43,9 +44,7 @@ a[href^="tel:"] {
 ========================================================================== */
 
 .btn, a:link.btn, a:visited.btn {
-	@include box-shadow(0, 0, 5px, 0px, $grey);
-	@include rounded(0px);
-	@include transition(all, .60s, ease);
+	transition: all .60s ease;
 	background-color:$link-color;
 	border:2px solid white;
 	color:$white; text-decoration:none;
@@ -68,13 +67,13 @@ a[href^="tel:"] {
 
 .icon-social {
 	@include set-font-size(40px);
-	@include transition(all, .60s, ease);
+	transition: all .60s ease;
 	text-decoration:none;
 	position:relative; top:0px;
 	margin-right:$half-spacing-unit;
 
 	&:hover,&:focus,&:active {
-		@include transition(all, .60s, ease);
+		transition: all .60s ease;
 		top:10px;
 	}
 

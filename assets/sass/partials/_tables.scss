@@ -11,24 +11,25 @@
 table {
 width : 100%;
 max-width : 100%;
-margin-bottom : $base-spacing-unit;
 background-color : $white;
 
 	th,
 	td {
+		@include set-font-size(14px);
+		@extend .text-left;
+
 		padding : 10px;
 		vertical-align : top;
 		border-top : 1px solid $grey;
-		@include set-font-size(14px);
 		color:$text-color;
-		@extend .text-left;
+
 	}
 
 	th {
-		@extend .bold;
 		@include set-font-size(14px);
 		background-color:$base-color;
 		color:$white;
+		font-weight:bold;
 	}
 
 	thead th {
@@ -42,7 +43,7 @@ background-color : $white;
 
 	tbody tr td,
 	tbody tr th {
-		@include transition(background-color .25s linear);
+		transition: background-color .25s lnear;
 	}
 
 }
