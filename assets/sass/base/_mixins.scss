@@ -9,16 +9,7 @@
 //   FONT FORMULA
 //========================================================================== */
 // SEE Vertical Rhythm File for the rules on this.
-
-
-//TODO: Remove this and associated calls and use the one in the Vertical Rhythm document - line 39!!!!!
-
-//Mixin For REM and PX Fallback
-
-@mixin px-rem($property, $value) {
-  #{$property}: $value * $base-font-size;
-  #{$property}: #{$value}rem;
-}
+// SEE Vertical Rhythm File for the rules on PX to REM fallback.
 
 
 //* ==========================================================================

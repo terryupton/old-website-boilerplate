@@ -10,9 +10,10 @@
 ========================================================================== */
 
 .box {
+	@include px-to-rem(padding, $base-spacing-unit;)
 	margin-bottom:$base-spacing-unit;
-	padding:$base-spacing-unit;
 
-	border:5px solid $white;
-	background-color:$base-color;
+	&:last-child {
+		margin-bottom:0;
+	}
 }

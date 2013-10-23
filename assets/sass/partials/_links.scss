@@ -14,7 +14,7 @@ a {
 	transition: all .60s ease;
 	color:$link-color; text-decoration:none;
 	&:hover,&:focus,&:active {
-		@include transition(all, .60s, ease);
+		transition: all .60s ease;
 		color:$hover-color;
 		text-decoration:none;
 		cursor:pointer;
@@ -27,7 +27,7 @@ footer a {
 	&:hover,&:focus,&:active {
 		color:$hover-color;
 		text-decoration:underline;
-		@include transition(all, .60s, ease);
+		transition: all .60s ease;
 	}
 }
 
@@ -54,7 +54,7 @@ a[href^="tel:"] {
 
 
 	&:hover,&:focus,&:active {
-		@include transition(all, .60s, ease);
+		transition: all .60s ease;
 		background-color:$hover-color;
 		color:$white;
 		outline: none;

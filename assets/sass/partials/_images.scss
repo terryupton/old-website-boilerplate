@@ -27,13 +27,13 @@ img[height]{
 ========================================================================== */
 .img-right{
   @include trailer;
-  @include px-rem(margin-left, 1.5);
+  @include px-to-rem(margin-left, $base-spacing-unit);
   float:right;
 }
 .img-left{
     float:left;
   @include trailer;
-  @include px-rem(margin-might, 1.5);
+  @include px-to-rem(margin-right, $base-spacing-unit);
 }
 .img-center{
   @include trailer;
@@ -41,7 +41,6 @@ img[height]{
   margin-right:auto;
   margin-left:auto;
 }
-
 
 /* ==========================================================================
    MISC/UNIQUE STYLES

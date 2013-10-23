@@ -9,14 +9,14 @@
 ========================================================================== */
 
 .margin-top 			{@include leader(); }
-.margin-right 			{margin-right:24px; margin-right:1.5rem;}
+.margin-right 			{@include px-to-rem(margin-right, $base-spacing-unit);}
 .margin-bottom 			{@include trailer();}
-.margin-left 			{margin-left:24px; margin-right:1.5rem;}
+.margin-left 			{@include px-to-rem(margin-left, $base-spacing-unit);}
 
-.half-margin-top 		{@include leader(0.5);
-.half-margin-right 		{margin-right:12px; margin-right:0.75rem;}
+.half-margin-top 		{@include leader(0.5);}
+.half-margin-right 		{@include px-to-rem(margin-right, $half-spacing-unit);}
 .half-margin-bottom 	{@include trailer(0.5);}
-.half-margin-left 		{margin-left:12px; margin-right:0.75rem;}
+.half-margin-left 		{@include px-to-rem(margin-left, $half-spacing-unit);}
 
 .flush-top 				{margin-top:0 !important;}
 .flush-right 			{margin-right:0 !important;}
@@ -153,5 +153,5 @@
 // Add an arrow ">" before the text
 %arrow-before:before {
     content: ">";
-    @include px-rem(margin-right, 0.5);
+    @include px-to-rem(margin-right, 5px);
 }

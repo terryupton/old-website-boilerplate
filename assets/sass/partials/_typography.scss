@@ -58,31 +58,33 @@ footer p {
 %caps {text-transform:uppercase;}
 
 
-ul, ol {
-	@include trailer(0.5);
-	@include set-font-size($p-font-size);
-	color:$text-color;
+main {
+
+	ul, ol {
+		@include trailer(0.5);
+		@include set-font-size($p-font-size);
+		color:$text-color;
+	}
+
+	ul 			{list-style: disc inside;}
+	ol 			{list-style: decimal inside;}
+
+	ul.square	{list-style: square inside;}
+	ul.disc 	{list-style: circle inside;}
+	ul.bullet 	{list-style: disc inside;}
+
+	li	{
+		@include px-to-rem(margin-right, $half-spacing-unit);
+		@include px-to-rem(margin-left, $half-spacing-unit);
+	}
+
+	ul > ul,
+	ul > ol,
+	ol > ol,
+	ol > ul  {
+		@include px-to-rem(margin, $half-spacing-unit);
+	}
 }
-
-ul 			{list-style: disc inside;}
-ol 			{list-style: decimal inside;}
-
-ul.square	{list-style: square inside;}
-ul.disc 	{list-style: circle inside;}
-ul.bullet 	{list-style: disc inside;}
-
-li			{
-	@include px-rem(margin-left, 0.75);
-	@include px-rem(margin-right, 0.75);
-}
-
-ul ul,
-ul ol,
-ol ol,
-ol ul 		{
-	@include px-rem(margin, 0.75);
-}
-
 
 %list-col-third 	{@include list-col(30%);}
 %list-col-half 		{@include list-col(45%);}
