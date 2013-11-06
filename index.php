@@ -113,12 +113,16 @@ function cachifyFileName($fileName)
 	================================================== -->
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-	<link rel="apple-touch-icon" href="/apple-touch-icon-57x57-precomposed.png" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-57x57-precomposed.png" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-76x76-precomposed.png" sizes="60x60" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-76x76-precomposed.png" sizes="76x76" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-114x114-precomposed.png" sizes="120x120" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
+	<link rel="apple-touch-icon" href="/img/touch/apple-touch-icon-152x152-precomposed.png" sizes="152x152" />
 
-	<meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+	<meta name="msapplication-TileImage" content="/img/touch/apple-touch-icon-144x144-precomposed.png">
 	<meta name="msapplication-TileColor" content="#333333">
 
 
