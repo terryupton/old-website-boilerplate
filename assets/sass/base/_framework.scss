@@ -54,14 +54,6 @@ footer {
 }
 
 
-main {
-}
-
-aside {
-
-}
-
-
 
 // HTML5 Native Accordion
 // Use details & summary to create an interactive widget that shows and hides
@@ -164,19 +156,6 @@ p, h1, h2, h3, h4, h5, h6, hgroup, dd, figure, pre, table, fieldset, legend, hr 
 	background: $base-color;
 	color: $white;
 	text-shadow: none;
-}
-
-
-/* ==========================================================================
-   CHROME FRAME PROMPT
-========================================================================== */
-
-.chromeframe {
-	@include rhythm-borders(0.5, 1px solid $error-color);
-	@extend .margin-right;
-	@extend .margin-left;
-    background: $error-background;
-    color: $error-color;
 }
 
 /* ==========================================================================

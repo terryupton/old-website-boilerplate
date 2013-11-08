@@ -63,8 +63,8 @@
 
 
 .main-menu {
-	@include transition(all, .60s, ease);
 	@extend .container;
+	transition: all .60s ease;
 	position:absolute;
 	top:45px;
 	z-index:1000;
@@ -159,7 +159,6 @@
 ========================================================================== */
 
 .footer-menu {
-	@include gs-span(m,all);
 	background-color:$black;
 
 	ul {

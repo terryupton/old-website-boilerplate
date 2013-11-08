@@ -5,3 +5,15 @@
           });
         }
     });
+
+
+//Save the orphans - Westley Knight
+//https://github.com/meteoracle/SaveTheOrphans
+$(document).ready(function(){
+
+    $("p").savetheorphans({
+        orphansToSave: 1
+    });
+
+});
+

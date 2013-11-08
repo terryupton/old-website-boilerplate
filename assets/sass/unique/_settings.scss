@@ -19,6 +19,9 @@ $base-line-height:			24px;
 $base-spacing-unit: 		$base-line-height!default;
 $half-spacing-unit: 		$base-spacing-unit / 2!default;
 
+//NEW Shorter Variables but calling the originals to protect legacy. Possibly remove the old names and replace with one variable name.
+$bsu:						$base-spacing-unit;
+$hsu:						$half-spacing-unit;
 
 $h1-font-size:				30px;
 $h2-font-size:				21px;

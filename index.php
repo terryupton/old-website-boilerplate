@@ -91,16 +91,11 @@ function cachifyFileName($fileName)
 	END LIST OF FILES
 	-->
 
+  	<script type="text/javascript" src="/assets/js/modernizr.min.js"></script>
 
 	<!--[if lt IE 9]>
-		<script type="text/javascript" src="/assets/js/html5shiv.min.js"></script>
 		<script type="text/javascript" src="/assets/js/respond.min.js"></script>
 	<![endif]-->
-
-
-	<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/assets/js/modernizr.min.js"></script>
-	<script type="text/javascript" src="/assets/js/functions.min.js"></script>
 
 
 
@@ -139,8 +134,30 @@ function cachifyFileName($fileName)
 	<!--[if lt IE 8]>
 	<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
+
+	<header role="banner">
+		<a href="/" title="Homepage"><img src="img/logo.png" alt="Logo" class="logo"></a>
+	</header>
+
+
+
+	<?php $current[$sectionNumber] = 'class="current"';	?>
+	<nav id="nav" class="main-menu" role="navigation">
+	    <ul>
+	        <li><a href="#search" accesskey="1" tabindex="1" class="search-link icon-search m-hide t-hide d-show"><span>Search</span></a></li>
+	        <li><a href="/" accesskey="2" tabindex="2" <?php echo $current[1] ?>>Home</a></li>
+	        <li><a href="" accesskey="3" tabindex="3" <? echo $current[2] ?>>Item</a></li>
+	        <li><a href="" accesskey="4" tabindex="4" <?php echo $current[3] ?>>Item</a></li>
+	        <li><a href="" accesskey="5" tabindex="5" <?php echo $current[4] ?>>Item</a></li>
+	        <li><a href="" accesskey="6" tabindex="6" <?php echo $current[5] ?>>Item</a></li>
+	        <li><a href="" accesskey="7" tabindex="7" <?php echo $current[6] ?>>Contact</a></li>
+	    </ul>
+	</nav>
+
+
+
 	<div class="container">
-		<main>
+		<main role="main">
 				<img src="/images/logo.svg" alt="Watfeilds Limited Logo" title="Watfeilds Limited Logo" class="logo">
 				<!--<img src="/images/logo.png" class="logo" alt="Watfeilds Limited Logo">-->
 				<h1 class="flush-bottom">Watfields Full Website Coming Soon</h1>
@@ -162,7 +179,7 @@ function cachifyFileName($fileName)
 					S74 9TL</p>
 		</main>
 
-		<aside>
+		<aside role="complementary">
 				<!--<img src="images/main.jpg" alt="Watfields Example Engineering Images" class="img-center">-->
 
 				<h2>Get Updates</h2>
@@ -188,7 +205,7 @@ function cachifyFileName($fileName)
 
 
 
-<footer>
+<footer role="contentinfo">
 	<div class="container">
 		<p>Watfields Limited are registered at Companies House England and Wales<br>
 		Company Registration Number. 08138894</p>
@@ -200,6 +217,34 @@ function cachifyFileName($fileName)
 		</p>
 	</div>
 </footer>
+
+
+<!-- JAVASCRIPTS
+ ================================================== -->
+
+<!-- TODO: Replace JQuery with CDN and Local Fallback. Update Version number as required -->
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>-->
+
+<script type="text/javascript" src="/assets/js/savetheorphans.min.js"></script>
+<script type="text/javascript" src="/assets/js/functions.min.js"></script>
+
+<!--[if IE 7]>
+<script>
+$.fn.equalheight = function() { return this };
+</script>
+<![endif]-->
+
+<!-- TODO: Google Analytics Code to be created from account -->
+<!--GOOGLE ANALYTCIS-->
+<!--END GOOGLE ANALYTCIS-->
+
+
+<!-- TODO: REMOVE GRIDSET JS COMMENTS -->
+<!-- Gridset App Temp Files
+================================================== -->
+<!-- <script src="https://get.gridsetapp.com/21997/overlay/"></script> -->
 
 </body>
 </html>

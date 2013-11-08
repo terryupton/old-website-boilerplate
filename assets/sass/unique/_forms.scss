@@ -38,10 +38,23 @@ label {
 	input[type=email],
 	select,
 	textarea {
-		width:90%;
+		@include placeholder();
 		@extend .text-input;
+		width:90%;
 		margin:0 0 15px 0;
 		border:1px solid rgba($grey, .6);
+
+		&:focus, &.required:focus {
+			@include placeholder($white);
+			border:2px solid rgba($white, .6);
+			background-color: $base-color;
+			color:$white;
+			outline: none;
+		}
+
+		&.required {
+			@include placeholder($sub-color);
+		}
 
 		&.error {
 			border: 1px solid $error-color;
@@ -49,19 +62,6 @@ label {
 			color: $error-color;
 			@include placeholder($error-color)
 		}
-
-		&:focus {
-			border:1px solid $sub-color;
-			background-color: $sub-color;
-			color:$white;
-			outline: none;
-
-			@include placeholder($white)
-
-		}
-
-		@include placeholder();
-		box-shadow:0 0 5px 5px rgba($grey, .8);
 	}
 
 	p {

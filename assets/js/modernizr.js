@@ -304,7 +304,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
         if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
           data.hasCSS = !!addStyleSheet(ownerDocument,
-                    'article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}' +
+                    'article,aside,figcaption,figure,footer,header,hgroup,nav,section,main{display:block}' +
                     'mark{background:#FF0;color:#000}'
           );
         }
@@ -314,7 +314,7 @@ window.Modernizr = (function( window, document, undefined ) {
         return ownerDocument;
       }        var html5 = {
 
-            'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video',
+            'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video main',
 
             'shivCSS': (options.shivCSS !== false),
 
